@@ -1,8 +1,7 @@
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        //comentario
+    public static void main(String[] args){
         int[] arr = new int[5];
         Random rando = new Random();
         for(int i = 0; i < 5; i++){
