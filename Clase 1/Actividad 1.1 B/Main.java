@@ -12,12 +12,12 @@ public class Main {
         facturas.add(new factura(3,1500,102));
         facturas.add(new factura(4,2600,100));
 
-        List<cliente> clientes = new ArrayList<>();
-        clientes.add(new cliente(100,"Nico"));
-        clientes.add(new cliente(101,"Esteban"));
-        clientes.add(new cliente(102,"Zoe"));
+        List<Cliente> clientes = new ArrayList<>();
+        clientes.add(new Cliente(100,"Nico"));
+        clientes.add(new Cliente(101,"Esteban"));
+        clientes.add(new Cliente(102,"Zoe"));
 
-        List<SumaFacturas> resultado = sistemaFacturacion(facturas,clientes);
+        List<SumaFacturas> resultado = sistemaFacturacion(facturas, clientes);
 
         for (int i = 0; resultado.size() > i; i++){
             System.out.println("Id cliente: "+ resultado.get(i).IDcliente);
@@ -27,7 +27,7 @@ public class Main {
         }
     }
 
-    public static List sistemaFacturacion(List<factura> facturas, List<cliente> clientes){
+    public static List sistemaFacturacion(List<factura> facturas, List<Cliente> clientes){
         List<SumaFacturas> listaRetorno = new ArrayList<>();
         for(int i =0; i < clientes.size(); i++){
             listaRetorno.add(new SumaFacturas(clientes.get(i).IDcliente,clientes.get(i).nombre,0));
@@ -42,7 +42,4 @@ public class Main {
         }
         return listaRetorno;
     }
-
-
-
 }
