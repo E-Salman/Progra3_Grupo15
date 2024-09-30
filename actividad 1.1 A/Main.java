@@ -2,13 +2,13 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-        int[] arreglillo = new int[5];
+        int[] arreglirijillo = new int[5];        
         Random rando = new Random();
         for(int i = 0; i < 5; i++){
-            arreglillo[i] = rando.nextInt(100);
-            System.out.println(arreglillo[i]);
+            arreglirijillo[i] = rando.nextInt(100);
+            System.out.println(arreglirijillo[i]);
         }
-        System.out.println("The maximum number in the array is: " + maxArray(arreglillo));
+        System.out.println("The maximum number in the array is: " + maxArray(arreglirijillo));
     }
 
     public static int maxArray(int[] arreglo){
