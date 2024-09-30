@@ -6,6 +6,7 @@ public class Main {
         Scanner scanner =  new Scanner(System.in);
         System.out.println("Ingrese el tamanio del arreglo: ");
         int cantidad = scanner.nextInt();
+        scanner.close();
         int[] arreglirijillo = new int[cantidad]; 
         Random rando = new Random(); 
     
