@@ -1,3 +1,4 @@
+package Clase_1.Actividad_1_1_A;
 import java.util.Random;
 import java.util.Scanner;
 

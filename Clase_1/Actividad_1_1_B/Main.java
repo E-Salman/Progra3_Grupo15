@@ -1,9 +1,11 @@
+package Clase_1.Actividad_1_1_B;
+
 import java.util.ArrayList;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class MainFacturas {
+public class Main {
     public static void main(String[] args) {
         List<Factura> facturas = new ArrayList<>();
         facturas.add(new Factura(1,2000,100));

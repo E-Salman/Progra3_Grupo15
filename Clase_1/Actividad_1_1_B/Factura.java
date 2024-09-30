@@ -1,3 +1,4 @@
+package Clase_1.Actividad_1_1_B;
 public class Factura {
     int IDfactura;
     int importe;

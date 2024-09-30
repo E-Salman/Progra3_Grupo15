@@ -1,3 +1,5 @@
+package Clase_1.Actividad_1_1_B;
+
 public class SumaFacturas {
     int IDcliente;
     String nombre;
