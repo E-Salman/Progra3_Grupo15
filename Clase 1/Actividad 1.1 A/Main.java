@@ -1,10 +1,15 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arreglirijillo = new int[5];
-        Random rando = new Random();
-        for (int i = 0; i < 5; i++) {
+        Scanner scanner =  new Scanner(System.in);
+        System.out.println("Ingrese el tamanio del arreglo: ");
+        int cantidad = scanner.nextInt();
+        int[] arreglirijillo = new int[cantidad]; 
+        Random rando = new Random(); 
+    
+        for (int i = 0; i < cantidad; i++) { //O(n)
             arreglirijillo[i] = rando.nextInt(100);
             System.out.println(arreglirijillo[i]);
         }
@@ -13,10 +18,11 @@ public class Main {
 
     public static int maxArray(int[] arreglo) {
         int max = arreglo[0];
-        for (int i = 1; i < arreglo.length; i++) {
+        for (int i = 1; i < arreglo.length; i++) { //O(n)
             if (arreglo[i] > max)
                 max = arreglo[i];
         }
         return max;
     }
+    //complejidad: O(2n)
 }
