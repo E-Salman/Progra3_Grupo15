@@ -1,0 +1,4 @@
+Uso de long: Se utliza para representar numeros grandes, limitado por su tamanio de memoria de 64 bits. Abarcando los numeros entre el -9,223,372,036,854,775,808
+al 9,223,372,036,854,775,807. 
+Uso del BigInteger: Se utliza para representar numeros extremadamente grandes o cuadno no se suele conocer el tamanio del numero que se va a manipular.
+Esta limitado por la cantidad de memoria del sistema.
