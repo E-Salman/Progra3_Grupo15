@@ -14,15 +14,15 @@ public class Main {
         }
         
     }
-    
-    public static boolean esExacto(int[] monedas, int vuelto){
-        Arrays.sort(monedas);
-        for (int i = monedas.length - 1; i >= 0; i--) {
-            while(vuelto >= monedas[i]){
+    //O(n^2) + O(n log (n))
+    public static boolean esExacto(int[] monedas, int vuelto){ 
+        Arrays.sort(monedas);//n log (n)
+        for (int i = monedas.length - 1; i >= 0; i--) { //n
+            while(vuelto >= monedas[i]){ //n^2
                 vuelto -= monedas[i];
             }
         }
         return vuelto==0;
-
     }
+
 }
