@@ -19,7 +19,6 @@ public class Actividad1 {
             return clientes[inicio];
         }
 
-
         int mitad = (inicio + fin) / 2;
 
         Cliente clienteIzq = encontrarMaximoCliente(clientes, inicio, mitad);
