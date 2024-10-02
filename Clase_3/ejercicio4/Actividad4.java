@@ -1,7 +1,8 @@
+package ejercicio4;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NElementosMasGrandes {
+public class Actividad4 {
 
     public static List<Integer> nElementosMasGrandes(List<Integer> lista, int n) {
         if (lista.isEmpty() || n == 0) {

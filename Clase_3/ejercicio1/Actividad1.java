@@ -1,3 +1,4 @@
+package ejercicio1;
 class Cliente {
     int id;
     String nombre;
@@ -10,7 +11,7 @@ class Cliente {
     }
 }
 
-public class MaximoScoring {
+public class Actividad1 {
 
     public static Cliente encontrarMaximoCliente(Cliente[] clientes, int inicio, int fin) {
    

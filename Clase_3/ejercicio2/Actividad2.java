@@ -1,4 +1,5 @@
-public class DosMayores {
+package ejercicio2;
+public class Actividad2 {
     public static void main(String[] args) {
         int[] arr = {12, 35, 1, 10, 34, 1};
         int[] resultado = encontrarDosMayores(arr, 0, arr.length - 1);

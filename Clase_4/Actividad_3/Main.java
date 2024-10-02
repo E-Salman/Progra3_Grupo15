@@ -14,12 +14,9 @@ public class Main {
             new Articulo(236.00,41.00),
             new Articulo(777.00,4.90)};
 
-    
         double w = 60;
-
         System.out.println("Los articulos agregados al camion: " + mochilaFraccional(articulos, w));
-        
-    }
+      }
     // O(n log n)
     public static List<Articulo> mochilaFraccional(Articulo[]articulos,double w){
         List<Articulo> articulosAgregados = new ArrayList<>();
@@ -36,8 +33,6 @@ public class Main {
                 w =0;            
             }
         }
-
         return articulosAgregados;
     } 
-    
 }

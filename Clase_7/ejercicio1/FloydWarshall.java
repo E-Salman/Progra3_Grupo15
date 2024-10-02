@@ -1,4 +1,4 @@
-package Clase_7;
+package Clase_7.ejercicio1;
 
 public class FloydWarshall {
 
