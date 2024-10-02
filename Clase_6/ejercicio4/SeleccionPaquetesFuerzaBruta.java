@@ -1,10 +1,7 @@
 package Clase_6.ejercicio4;
-
 import java.util.ArrayList;
 import java.util.List;
-
 public class SeleccionPaquetesFuerzaBruta {
-
     public static void main(String[] args) {
         int[] costos = {12, 20, 15, 25};
         int[] ganancias = {150, 2010, 100, 300};
@@ -13,7 +10,6 @@ public class SeleccionPaquetesFuerzaBruta {
         int maxGanancia = maxGananciaFuerzaBruta(costos, ganancias, presupuesto);
         System.out.println("La ganancia maxima que se puede obtener es: " + maxGanancia);
     }
-
     // Fuerza bruta: Explora todas las combinaciones posibles de paquetes
     public static int maxGananciaFuerzaBruta(int[] costos, int[] ganancias, int presupuesto) {
         return helper(costos, ganancias, presupuesto, 0, 0, 0);
