@@ -4,13 +4,11 @@ public class Grafo {
     private int[][] matrizAdyacencia;
     private int numVertices;
 
-    // Constructor: Inicializa el grafo con un número determinado de vértices
     public Grafo(int numVertices) {
         this.numVertices = numVertices;
         matrizAdyacencia = new int[numVertices][numVertices];
     }
 
-    // Operación: Agregar Arista
     public void agregarArista(int origen, int destino) {
         if (origen >= 0 && destino >= 0 && origen < numVertices && destino < numVertices) {
             matrizAdyacencia[origen][destino] = 1;
@@ -20,7 +18,6 @@ public class Grafo {
         }
     }
 
-    // Operación: Eliminar Arista
     public void eliminarArista(int origen, int destino) {
         if (origen >= 0 && destino >= 0 && origen < numVertices && destino < numVertices) {
             matrizAdyacencia[origen][destino] = 0;
@@ -30,7 +27,6 @@ public class Grafo {
         }
     }
 
-    // Operación: Verificar si existe una Arista
     public boolean verificarArista(int origen, int destino) {
         if (origen >= 0 && destino >= 0 && origen < numVertices && destino < numVertices) {
             return matrizAdyacencia[origen][destino] == 1;
@@ -40,7 +36,6 @@ public class Grafo {
         }
     }
 
-    // Operación: Listar adyacentes a un vértice dado
     public void listarAdyacentes(int vertice) {
         if (vertice >= 0 && vertice < numVertices) {
             System.out.print("Adyacentes de " + vertice + ": ");
@@ -60,7 +55,6 @@ public class Grafo {
         }
     }
 
-    // Operación: Contar el grado de salida de un vértice
     public int gradoSalida(int vertice) {
         if (vertice >= 0 && vertice < numVertices) {
             int gradoSalida = 0;
@@ -76,7 +70,6 @@ public class Grafo {
         }
     }
 
-    // Operación: Contar el grado de entrada de un vértice
     public int gradoEntrada(int vertice) {
         if (vertice >= 0 && vertice < numVertices) {
             int gradoEntrada = 0;
@@ -91,8 +84,7 @@ public class Grafo {
             return -1;
         }
     }
-
-    // Mostrar la matriz de adyacencia 
+ 
     public void mostrarMatrizAdyacencia() {
         System.out.println("Matriz de Adyacencia:");
         for (int i = 0; i < numVertices; i++) {

@@ -29,14 +29,12 @@ class Usuario {
 }
 
 class RedSocial {
-    // Diccionario que representa la lista de adyacencia (usuario -> lista de usuarios que sigue)
     private Map<Usuario, Set<Usuario>> seguidores;
 
     public RedSocial() {
         this.seguidores = new HashMap<>();
     }
 
-    // Operación: Agregar Usuario
     public void agregarUsuario(Usuario usuario) {
         if (!seguidores.containsKey(usuario)) {
             seguidores.put(usuario, new HashSet<>());
@@ -46,7 +44,6 @@ class RedSocial {
         }
     }
 
-    // Operación: Seguir
     public void seguir(Usuario seguidor, Usuario seguido) {
         if (!seguidores.containsKey(seguidor) || !seguidores.containsKey(seguido)) {
             System.out.println("Uno o ambos usuarios no existen.");
@@ -60,7 +57,6 @@ class RedSocial {
         }
     }
 
-    // Operación: Dejar de Seguir
     public void dejarDeSeguir(Usuario seguidor, Usuario seguido) {
         if (!seguidores.containsKey(seguidor) || !seguidores.containsKey(seguido)) {
             System.out.println("Uno o ambos usuarios no existen.");
@@ -74,7 +70,6 @@ class RedSocial {
         }
     }
 
-    // Operación: Lista de Seguidores (Usuarios que sigue un usuario dado)
     public void listaDeSeguidos(Usuario usuario) {
         if (!seguidores.containsKey(usuario)) {
             System.out.println("El usuario no existe.");
@@ -91,7 +86,6 @@ class RedSocial {
         }
     }
 
-    // Operación: Lista de Seguidores de (Usuarios que siguen a un usuario dado)
     public void listaDeSeguidores(Usuario usuario) {
         if (!seguidores.containsKey(usuario)) {
             System.out.println("El usuario no existe.");
@@ -120,27 +114,22 @@ public class Main {
         Usuario pedro = new Usuario("Pedro");
         Usuario ana = new Usuario("Ana");
 
-        // Agregar usuarios
         redSocial.agregarUsuario(juan);
         redSocial.agregarUsuario(maria);
         redSocial.agregarUsuario(pedro);
         redSocial.agregarUsuario(ana);
 
-        // Seguir usuarios
         redSocial.seguir(juan, maria);
         redSocial.seguir(maria, pedro);
         redSocial.seguir(juan, ana);
         redSocial.seguir(pedro, ana);
         redSocial.seguir(maria, ana);
 
-        // Intentar seguir a un usuario que ya se sigue
         redSocial.seguir(juan, ana);
 
-        // Dejar de seguir
         redSocial.dejarDeSeguir(juan, ana);
-        redSocial.dejarDeSeguir(juan, ana); // Ya no lo sigue
+        redSocial.dejarDeSeguir(juan, ana); 
 
-        // Consultar lista de seguidos y seguidores
         redSocial.listaDeSeguidos(juan);
         redSocial.listaDeSeguidores(ana);
     }
