@@ -1,3 +1,4 @@
+package ejercicio3;
 class Cliente {
     int id;
     String nombre;
