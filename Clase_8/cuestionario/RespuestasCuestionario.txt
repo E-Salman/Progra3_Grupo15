@@ -1,0 +1,40 @@
+1)d) Una meta objetiva es la eficiencia en tiempo de ejecución.
+2)b) En función del tamaño de entrada n y como crece T(n) a medida que n aumenta.
+3)a) Describe T(n) crece en función del tamaño de n en el peor de los casos.
+4)c) El crecimiento del tiempo de ejecución en función del tamaño de la entrada.
+5)d) Una función que se llama a sí misma para resolver un problema.
+6)b) Una ecuación que define un valor basado en sus valores anteriores.
+7)a) La relación entre el tamaño del problema y su solución dividida.
+8)d) Determinar el tiempo de ejecución total del algoritmo.
+9)c) Estrategia que divide un problema y combina soluciones parciales.
+10)b) Algoritmo que busca dividiendo el rango en mitades sucesivas.
+11)b) O(log n).
+12)c) Un algoritmo de ordenamiento basado en la técnica de divide y conquista.
+13)d) Divide la lista y ordena recursivamente las sublistas.
+14)d) O(n log n).
+15)b) Divide la lista, ordena sublistas y luego las fusiona.
+16)c) O(n log n).
+17)c) Cuando se trabaja con listas que ya están casi ordenadas.
+18)b) Un algoritmo que toma decisiones locales óptimas.
+19)c) Toma la decisión óptima en cada paso.
+20)c) Optimizar localmente en cada paso.
+21)d) Donde la solución local lleva a la global óptima.
+22)b) Existencia de subestructuras óptimas.
+23)d) Algoritmo de Kruskal.
+24)c) Cuando el grafo es muy denso y el número de aristas es cercano a V².
+25)b) Cuando el grafo es muy disperso y el número de aristas es mucho menor que V².
+26)b) Algoritmo de Dijkstra.
+27)d) Un grafo con aristas que tienen un sentido o dirección.
+28)d) Un camino que comienza y termina en el mismo vértice sin repetir aristas.
+29)c) Se almacenan aristas de entrada y salida.
+30)d) Un grafo donde cada arista tiene un peso o costo asociado.
+31)b) Algoritmo de Kruskal.
+32)c) Encontrar un árbol de recubrimiento mínimo.
+33)c) Resuelve problemas dividiéndolos en subproblemas más pequeños y almacena sus soluciones para evitar cálculos repetidos.
+34)c) Problema de la Mochila (Knapsack Problem).
+35)b) Dividir el problema en subproblemas más pequeños y resolver cada uno solo una vez, almacenando los resultados.
+36)c) Suele ser más eficiente, ya que reduce la complejidad exponencial de O(2^n) a la polinómica O(n^2) o O(n*m) en muchos problemas.
+37)b) O(V^3) ya que utiliza tres bucles anidados para recorrer todos los pares de nodos y actualizar las distancias más cortas.
+38)c) Encuentra la ruta más corta entre todos los pares de nodos en un grafo.
+39)c) Detecta la presencia de ciclos negativos en el grafo.
+40)c) Matriz de adyacencia. 
