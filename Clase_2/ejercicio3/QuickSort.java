@@ -1,4 +1,4 @@
-package Clase_2;
+package Clase_2.ejercicio3;
 public class QuickSort {
 
     // Método para realizar el ordenamiento QuickSort

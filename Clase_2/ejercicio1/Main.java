@@ -1,4 +1,4 @@
-package Clase_2;
+package Clase_2.ejercicio1;
 
 // Clase para representar un nodo del árbol
 class TreeNode {
@@ -11,7 +11,6 @@ class TreeNode {
         left = right = null;
     }
 }
-
 // Clase para representar el Árbol Binario de Búsqueda
 class BinarySearchTree {
     TreeNode root;

@@ -1,4 +1,4 @@
-package Clase_2;
+package Clase_2.ejercicio4;
 public class MergeSort {
 
     // Método principal que ordena el arreglo

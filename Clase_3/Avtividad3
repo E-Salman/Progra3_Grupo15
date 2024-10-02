@@ -28,12 +28,11 @@ public class DivideYVenceras {
             }
         }
 
-        // Dividir la lista en dos mitades
+
         int mitad = clientes.length / 2;
         Cliente[] izquierda = dosMaximos(dividir(clientes, 0, mitad));
         Cliente[] derecha = dosMaximos(dividir(clientes, mitad, clientes.length));
 
-        // Combinar los resultados de las dos mitades
         Cliente max1, max2;
         if (izquierda[0].scoring > derecha[0].scoring) {
             max1 = izquierda[0];
@@ -46,7 +45,7 @@ public class DivideYVenceras {
         return new Cliente[] {max1, max2};
     }
 
-    // Método auxiliar para dividir el array
+
     private static Cliente[] dividir(Cliente[] clientes, int inicio, int fin) {
         Cliente[] resultado = new Cliente[fin - inicio];
         System.arraycopy(clientes, inicio, resultado, 0, fin - inicio);
