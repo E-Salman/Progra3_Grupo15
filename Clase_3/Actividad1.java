@@ -10,7 +10,7 @@ class Cliente {
     }
 }
 
-public class MaximoScoring {
+public class Actividad1 {
 
     public static Cliente encontrarMaximoCliente(Cliente[] clientes, int inicio, int fin) {
    

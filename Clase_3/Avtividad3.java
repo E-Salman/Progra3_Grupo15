@@ -15,7 +15,7 @@ class Cliente {
     }
 }
 
-public class DivideYVenceras {
+public class Avtividad3 {
 
     public static Cliente[] dosMaximos(Cliente[] clientes) {
         if (clientes.length == 1) {
@@ -59,7 +59,7 @@ public class DivideYVenceras {
             new Cliente(2, "Cliente B", 20),
             new Cliente(3, "Cliente C", 70),
             new Cliente(4, "Cliente D", 90),
-            new Cliente(5, "Cliente E", 60)
+            new Cliente(5, "Cliente E", 23),
         };
 
         Cliente[] resultado = dosMaximos(clientes);
