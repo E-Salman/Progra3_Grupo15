@@ -22,7 +22,18 @@ public class Main {
                 vuelto -= monedas[i];
             }
         }
-        return vuelto==0;
+        return vuelto == 0;
     }
-
 }
+
+/* 
+ *                  PSEUDCODIGO 
+ *  Funcion esExacto(monedas, vuelto)
+ *      Ordenar de menor a mayor(monedas) 
+ *      Para i de n a 0
+ *          Mientras(vuelto >= monedas[i])
+ *              vuelto <-- vuelto - monedas[i]
+ *          Fin Mientras
+ *      Fin Para
+ *  Devolver (vuelto == 0)
+*/
