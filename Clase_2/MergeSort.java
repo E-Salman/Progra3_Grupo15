@@ -1,5 +1,4 @@
-package clase2;
-
+package Clase_2;
 public class MergeSort {
 
     // Método principal que ordena el arreglo
@@ -29,11 +28,11 @@ public class MergeSort {
         merge(arreglo, izquierda, derecha);
     }
 
-    // Método para mezclar dos mitades ordenadas
-    private static void merge(int[] arreglo, int[] izquierda, int[] derecha) {
+    // Método para mezclar dos subarreglos ordenados en un único arreglo
+    public static void merge(int[] arreglo, int[] izquierda, int[] derecha) {
         int i = 0, j = 0, k = 0;
 
-        // Mezclar los elementos en orden
+        // Comparar y mezclar los elementos de izquierda y derecha
         while (i < izquierda.length && j < derecha.length) {
             if (izquierda[i] <= derecha[j]) {
                 arreglo[k++] = izquierda[i++];
@@ -42,15 +41,33 @@ public class MergeSort {
             }
         }
 
-        // Copiar los elementos restantes de la mitad izquierda
+        // Copiar los elementos restantes de izquierda (si hay)
         while (i < izquierda.length) {
             arreglo[k++] = izquierda[i++];
         }
 
-        // Copiar los elementos restantes de la mitad derecha
+        // Copiar los elementos restantes de derecha (si hay)
         while (j < derecha.length) {
             arreglo[k++] = derecha[j++];
         }
     }
 
+    // Método principal para probar el MergeSort
+    public static void main(String[] args) {
+        int[] arrayDesordenado = {34, 7, 23, 32, 5, 62};
+
+        System.out.println("Array desordenado:");
+        for (int i : arrayDesordenado) {
+            System.out.print(i + " ");
+        }
+
+        // Llamada al método mergeSort
+        mergeSort(arrayDesordenado);
+
+        System.out.println("\nArray ordenado:");
+        for (int i : arrayDesordenado) {
+            System.out.print(i + " ");
+        }
+    }
 }
+

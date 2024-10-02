@@ -1,5 +1,4 @@
-package clase2;
-
+package Clase_2;
 public class BusquedaBinaria {
 
     // Método para realizar la búsqueda binaria
@@ -28,7 +27,6 @@ public class BusquedaBinaria {
         // Si no se encuentra el objetivo, retorna -1
         return -1;
     }
-
     public static void main(String[] args) {
         int[] arreglo = {1, 3, 5, 7, 9, 11, 13};
         int objetivo = 7;
@@ -40,4 +38,4 @@ public class BusquedaBinaria {
             System.out.println("Elemento encontrado en el índice: " + resultado);
         }
     }
-}
+}   
