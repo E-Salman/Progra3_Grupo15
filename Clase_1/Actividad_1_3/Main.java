@@ -14,11 +14,13 @@ public class Main {
     //a = 1
     //b = 1
     //k = 0
-    //ENTONCES --> O(n^(k + 1)) --> O(n)
+    //a = 1 ENTONCES --> O(n^(k + 1)) --> O(n)
+
     private static int sumaRecursiva(int i){
         if(i == 0){
             return 0;
         }
         return i + sumaRecursiva(i - 1);
     }
+    
 }
