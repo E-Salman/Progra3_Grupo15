@@ -1,0 +1,14 @@
+
+funcion contarComprobantes(comprobantes, monto) 
+    comprobantesUsados = nueva Lista
+    ordenar de menor a mayor(comprobantes)
+    Para i de n a 0
+        mientras monto >= comprobantes(i)
+            comprobantesUsados.agregar(comprobantes(i))
+            monto = monto - comprobantes(i)
+        fin mientras
+    fin para
+
+devolver comprobantesUsados
+
+    
