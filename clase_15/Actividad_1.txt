@@ -1,0 +1,48 @@
+El problema del vendedor viajero consiste en que un vendedor debe visitar una serie de ciudades comenzando y terminando en la misma. El objetivo es encontrar la ruta mas 
+corta que le permita viajar a todas las ciudades una unica vez.
+Este es un problema NP-hard, lo que significa que no existe un algoritmo eficiente conocido en todos los casos. En el problema se presentan N! rutas posibles. Ya que dada una 
+ruta da igual el punto de inicio y no importa la direccion en la que se desplace el viajante, el numero de rutas posibles a examinar se reduce, por lo que hay que considerar
+(N-1)!/2 rutas posibles.
+Por ejemplo, para una cantidad de 15 ciudades las rutas posibles son: 
+(15 - 1)!/2 = 43,589,145,600 rutas unicas.
+
+Hay varios algoritmos Heuristicos y aproximados que retornan rapidamente buenas soluciones, encontrando soluciones para problemas extremadamente largos en un tiempo razonable,
+ente ellos se encuentran: 
+.Heurísticas Constructivas:
+- Algoritmo del vecino mas proximo(NN): Tambien llamado algoritmo greedy, permite al viajante elegir la ciudad no visitada mas cercana como proximo movimiento. El algoritmo promedio 
+retirna un camino de un 25% mas largo que el menor camino posible el algoritmo NN tiene un factor de aproximación de orden Θ(log |V|), para instancias que satisfacen la 
+desigualdad triangular
+- Operador de Fragmento más cercano (NF): Es una variación del algoritmo NN la cual conecta un grupo de ciudades no visitadas más cercanas, encontrando la 
+ruta más corta con iteraciones sucesivas.
+- Arbol de expansion minima: Utilizan un árbol de expansión mínima (MST) para construir el recorrido. Garantizan una solución con un costo máximo del doble del camino 
+óptimo (2×). El algoritmo de Christofides mejora las soluciones basadas en MST, usando un emparejamiento perfecto mínimo (minimum-weight matching) en los nodos impares del árbol.
+roduce un recorrido con un costo máximo de 1.5× el óptimo
+- Match Twice and Stitch (MTS): Este metodo realiza un primer emparejamiento para encontrar un conjunto inicial de ciclos, elimina las aristas del primer emparejamiento y 
+realiza un segundo. Termina uniendo los ciclos generados en el paso anterior para formar el recorrido final.
+
+.Mejora iterativa:
+- Intercambio par a par(2-0pt): en cada iteración se eliminan de dos aristas y se reemplazan estas con dos aristas diferentes que reconecten los fragmentos creados por la
+eliminación de las aristas produciendo un camino nuevo más corto. Esto es un caso especial del método k-opt.
+- Heurística k-opt: es una generalización del 2-opt que elimina k aristas del recorrido actual y reconecta los fragmentos de forma óptima utilizando fuerza bruta para 
+determinar la mejor combinación. Su versión más utilizada es el 3-opt, que mejora significativamente el recorrido al explorar un mayor número de posibilidades. Una variante 
+interesante es el 2.5-opt, que restringe los cambios a aquellos en los que dos de las aristas eliminadas son adyacentes, logrando un equilibrio entre calidad de mejora y costo computacional.
+- Heurística Variable-opt (V-opt): generaliza aún más el k-opt al no fijar un número específico de aristas eliminadas, permitiendo que este conjunto crezca dinámicamente 
+durante la búsqueda. Esto le da una gran flexibilidad para escapar de mínimos locales, alcanzando soluciones de mayor calidad.
+
+.Mejoras aleatoreas:
+Los algoritmos optimizados de cadenas de Márkov que usan heurísticas de búsquedas locales como sub-algoritmos pueden encontrar una ruta extremadamente cerca de la ruta óptima
+para instancias de 700 a 800 ciudades.
+
+.Optmizacion por colonia de hormigas: 
+Modela el comportamiento observado en las hormigas reales de encontrar caminos cortos, estas son representadas como agentes virtuales exploran rutas basándose en la distancia 
+y las feromonas dejadas. A medida que una hormiga recorre una ruta más corta, deja una mayor cantidad de feromonas en esa ruta, lo que aumenta la probabilidad de que otras
+hormigas elijan ese camino, favoreciendo la convergencia hacia una solución óptima.
+
+.Casos especiales:
+- TSP metrico: sigue la desigualdad triangular, es decir, la distancia directa entre dos puntos A y B no es mayor que la distancia de A a C sumada con la de C a B. Esto es 
+útil porque garantiza que las rutas más cortas siempre son consideradas. Para resolverlo, el algoritmo de Christofides usa un enfoque basado en el árbol de expansión mínima
+y un emparejamiento perfecto. Este algoritmo genera una solución cuya longitud es a lo sumo 1.5 veces el óptimo
+- TSP ecludiano: Es un caso particular del TSP métrico, donde las distancias se calculan usando la distancia euclidiana entre puntos. Como las distancias cumplen la desigualdad
+triangular, existen soluciones aproximadas más rápidas que para el TSP general.
+- TSP asimetrico: El caso donde la distancia de A a B no es igual que la distancia de B a A es llamado asimétrico. Una aplicación práctica de un TSP asimétrico es la 
+optimización de rutas usando un enrutamiento calle-nive
