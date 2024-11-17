@@ -27,5 +27,4 @@ public class Main {
         return max;
     }
     //complejidad: O(2n)
-    //hola mundo
 }
