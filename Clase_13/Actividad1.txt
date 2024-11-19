@@ -1,0 +1,21 @@
+1. Indicar algunos ejemplos de Acciones posibles del atacante:
+
+respuesta: Inyección de código SQL malicioso, Cross-site scripting y explotación de vulnerabilidades
+
+2. Indicar las Funciones del sistema de detección A su vez, el sistema de detección de 
+ataques debe reaccionar para intentar evitar o mitigar estas acciones. ¿Qué técnicas o 
+herramientas puede usar el sistema para detectar estos ataques?
+
+respuesta: Monitoreo y Análisis del Tráfico (ej: Snort), análisis de firmas (ModSecurity) y 
+Análisis de vulnerabilidades (OpenVAS)
+
+
+3. Explicar cómo se aplicaría la poda alfa-beta
+
+respuesta: En el sistema de detección de ciberataques, la poda alfa-beta va a descartar las 
+ramas del árbol de decisión que no mejoran la detección de amenazas (como Inyección SQL y Cross-site scripting), 
+enfocandose en las opciones más eficaces para que la respuesta sea mas rápida y eficiente.
+
+4. Construir un árbol de decisión simplificado
+
+(foto en pdf)
