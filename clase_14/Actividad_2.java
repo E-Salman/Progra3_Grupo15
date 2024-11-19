@@ -1,5 +1,5 @@
-
-public class SudokuSolver {
+package Clase_14;
+public class Actividad_2 {
 
     // Tamaño del tablero pasa de 9 a 6
     private static final int SIZE = 6;
