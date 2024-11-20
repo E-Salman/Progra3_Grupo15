@@ -45,4 +45,4 @@ y un emparejamiento perfecto. Este algoritmo genera una solución cuya longitud 
 - TSP ecludiano: Es un caso particular del TSP métrico, donde las distancias se calculan usando la distancia euclidiana entre puntos. Como las distancias cumplen la desigualdad
 triangular, existen soluciones aproximadas más rápidas que para el TSP general.
 - TSP asimetrico: El caso donde la distancia de A a B no es igual que la distancia de B a A es llamado asimétrico. Una aplicación práctica de un TSP asimétrico es la 
-optimización de rutas usando un enrutamiento calle-nive
+optimización de rutas usando un enrutamiento calle-nivel
