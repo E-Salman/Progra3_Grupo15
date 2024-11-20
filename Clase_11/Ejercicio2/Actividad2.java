@@ -34,13 +34,13 @@ public class Actividad2 {
         return true;
     }
     public static void resolverDisenoInteriores() {
-        int[][] habitacion = new int[N][N]; // Crear un habitacion vacío
-        poneEscritorios(habitacion, 0, 0); // Iniciar colocando los escritorios
+        int[][] habitacion = new int[N][N];
+        poneEscritorios(habitacion, 0, 0); 
     }
 
 
     public static boolean poneEscritorios(int[][] habitacion, int fila, int escritoriosPuestos) {
-        if (escritoriosPuestos == 4) { // Si hemos colocado 4 escritorios, pasar a colocar sillas
+        if (escritoriosPuestos == 4) {
             poneSillas(habitacion, 0, 0);
             return true;
         }
@@ -75,13 +75,12 @@ public class Actividad2 {
 
                     poneSillas(habitacion, i + 1, sillasPuestas + 1);
 
-                    // Backtrack: quitar silla
                     habitacion[i][j] = 0;
                 }
             }
         }
 
-        return false; // No hay solución válida en esta rama
+        return false; 
     }
 
     public static void imprimirhabitacion(int[][] habitacion) {

@@ -5,7 +5,6 @@ public class Actividad3 {
     static int[][] habitacion = new int[N][N];
 
     public static boolean puedo(int[][] habitacion, int fila, int col, int tipo) {
-        // Verificar fila y columna para el tipo actual (1: computadora, 2: impresora)
         for (int i = 0; i < N; i++) {
             if (habitacion[fila][i] == tipo || habitacion[i][col] == tipo) {
                 return false;
@@ -16,11 +15,10 @@ public class Actividad3 {
 
     public static boolean ponerCI(int[][] habitacion, int fila, int tipo) {
         if (fila == N) {
-            if (tipo == 1) { // Si terminamos con computadoras, ahora colocamos impresoras
+            if (tipo == 1) { 
                 return ponerCI
         (habitacion, 0, 2);
             }
-            // Si también colocamos impresoras, imprimimos la configuración
             imprimirHabitacion(habitacion);
             return true;
         }
@@ -31,7 +29,7 @@ public class Actividad3 {
                 habitacion[fila][col] = tipo;
                 exito |= ponerCI
         (habitacion, fila + 1, tipo);
-                habitacion[fila][col] = 0; // Deshacer (backtrack)
+                habitacion[fila][col] = 0; 
             }
         }
         return exito;
@@ -41,11 +39,11 @@ public class Actividad3 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (habitacion[i][j] == 1) {
-                    System.out.print("C "); // C para computadora
+                    System.out.print("C "); 
                 } else if (habitacion[i][j] == 2) {
-                    System.out.print("I "); // I para impresora
+                    System.out.print("I "); 
                 } else {
-                    System.out.print(". "); // . para espacio vacío
+                    System.out.print(". "); 
                 }
             }
             System.out.println();
@@ -54,6 +52,6 @@ public class Actividad3 {
     }
 
     public static void main(String[] args) {
-        ponerCI(habitacion, 0, 1); // Colocamos primero las computadoras (1), luego impresoras (2)
+        ponerCI(habitacion, 0, 1); 
     }
 }
