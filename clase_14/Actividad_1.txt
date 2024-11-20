@@ -1,0 +1,5 @@
+Actividad 1
+1- Probara poner una reina en cada fila, por cada columna. Si encuentra un lugar donde se pueda poner, pasa a la siguiente fila. Si no puede poner la reina en ninguna columna, retrocede y cambia la posición de la reina en la fila anterior.
+2- Retorna true e imprime la solución. Si no encuentra un lugar donde pueda poner la reina, va para atrás y prueba otro lugar de las filas anteriores.
+3- Cuando "Retrocede", saca la reina de la ultima posición y la prueba en otra columna4- Cambiando la linea "private static final int N = 4;" a "private static final int N = 8;". El t de ejecución aumentaara muchísimo, ya que el numero decombinaciones posibles aumenatara exponencialmente.
+5- Porque chequea que una reina se pueda poner en una posición sin que ataque a otras. Si no estuviera, el algoritmo pondría reinas en cualquier lugar ya que no habría una condición para ponerlas.
